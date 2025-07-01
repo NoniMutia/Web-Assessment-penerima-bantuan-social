@@ -1,0 +1,120 @@
+
+# App-Survei - Aplikasi Survei & Penilaian Penerima Bantuan
+
+Aplikasi berbasis web menggunakan Laravel dan Livewire untuk mendata serta menilai kelayakan penerima bantuan. Dilengkapi dengan fitur CRUD, penilaian otomatis berdasarkan kriteria tertentu, dan ekspor hasil penilaian ke PDF.
+
+---
+
+## 🔍 Fitur Utama
+
+- ✅ CRUD Data Penerima Bantuan
+- ✅ Input dan Penilaian Berbasis Livewire (Real-time)
+- ✅ Perhitungan Otomatis Skor Kelayakan Berdasarkan:
+  - Penghasilan
+  - Tanggungan Anak
+  - Kepemilikan Rumah
+  - Kendaraan
+  - Riwayat Bantuan Sebelumnya
+- ✅ Ekspor Hasil Penilaian ke Format PDF (menggunakan DomPDF)
+- ✅ Tampilan hasil penilaian rapi dan responsif
+
+---
+
+## 🛠️ Teknologi yang Digunakan
+
+- [Laravel 10](https://laravel.com/)
+- [Livewire](https://livewire.laravel.com/)
+- [barryvdh/laravel-dompdf](https://github.com/barryvdh/laravel-dompdf)
+- Bootstrap 5
+- MySQL
+
+---
+
+## 📦 Instalasi
+
+### 1. Clone Repository
+
+```bash
+git clone https://github.com/username/app-survei-laravel.git
+cd app-survei-laravel
+```
+
+### 2. Install Dependency
+
+```bash
+composer install
+```
+
+### 3. Konfigurasi Environment
+
+```bash
+cp .env.example .env
+php artisan key:generate
+```
+
+Edit file `.env` dan sesuaikan konfigurasi database:
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=nama_database
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+### 4. Jalankan Migrasi
+
+```bash
+php artisan migrate
+```
+
+### 5. Jalankan Server Lokal
+
+```bash
+php artisan serve
+```
+
+Akses di: [http://localhost:8000](http://localhost:8000)
+
+---
+
+## 🖨️ Ekspor PDF
+
+Hasil penilaian dapat diekspor menjadi PDF langsung dari halaman web. Pastikan package DomPDF sudah terinstall:
+
+```bash
+composer require barryvdh/laravel-dompdf
+```
+
+---
+
+## 📁 Struktur Folder Penting
+
+- `app/Livewire/` – Komponen-komponen Livewire (CRUD, Penilaian)
+- `resources/views/` – Blade Templates
+- `routes/web.php` – Rute aplikasi
+- `database/migrations/` – Struktur tabel
+
+---
+
+## 🙋‍♀️ Penggunaan
+
+1. Input data penerima bantuan.
+2. Isi semua kriteria (penghasilan, rumah, kendaraan, dst).
+3. Sistem otomatis menghitung skor.
+4. Klik tombol **"Download PDF"** untuk mengunduh hasil penilaian.
+
+---
+
+## 📝 Lisensi
+
+Proyek ini bersifat open-source untuk kebutuhan pembelajaran dan pengembangan sistem penilaian sosial berbasis web.
+
+---
+
+## 📫 Kontak
+
+Dikembangkan oleh: Noni Mutia Utari
+Email: [nonimutiatugas@gmail.com]  
+GitHub: [https://github.com/NoniMutia](https://github.com/NoniMutia)
