@@ -79,22 +79,11 @@ Akses di: [http://localhost:8000](http://localhost:8000)
 
 ---
 
-## 🖨️ Ekspor PDF
-
-Hasil penilaian dapat diekspor menjadi PDF langsung dari halaman web. Pastikan package DomPDF sudah terinstall:
-
-```bash
-composer require barryvdh/laravel-dompdf
-```
-
----
-
 ## 📁 Struktur Folder Penting
 
 - `app/Livewire/` – Komponen-komponen Livewire (CRUD, Penilaian)
 - `resources/views/` – Blade Templates
 - `routes/web.php` – Rute aplikasi
-- `database/migrations/` – Struktur tabel
 - `database/db_survei.sql` – File database hasil export
 
 ---
@@ -115,6 +104,32 @@ database/db_survei.sql
 5. Klik **Go**
 
 Setelah itu, kamu bisa langsung menjalankan Laravel seperti biasa.
+
+---
+
+## 📸 Tampilan Aplikasi
+
+### 🖼️ Form Input Penerima Bantuan
+![Form Input](public/assets/img/form-input.png)
+Halaman pengisian data penerima bantuan seperti NIK, nama, tanggal lahir, dan alamat.
+
+---
+
+### 🖼️ Halaman Login
+![Login](public/assets/img/login.png)
+Login untuk pengguna dengan email dan password yang telah terdaftar.
+
+---
+
+### 🖼️ Halaman Penilaian Otomatis
+![Penilaian](public/assets/img/penilaian.png)
+Menampilkan skor penilaian berdasarkan penghasilan, rumah, tanggungan, dan kendaraan.
+
+---
+
+### 🖼️ Hasil Penilaian
+![Hasil](public/assets/img/hasil.png)
+Halaman rekapitulasi hasil penilaian yang dapat diunduh sebagai PDF.
 
 ---
 
