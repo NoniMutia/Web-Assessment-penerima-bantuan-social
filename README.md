@@ -35,8 +35,8 @@ Aplikasi berbasis web menggunakan Laravel dan Livewire untuk mendata serta menil
 ### 1. Clone Repository
 
 ```bash
-git clone https://github.com/username/app-survei-laravel.git
-cd app-survei-laravel
+git clone https://github.com/NoniMutia/Web-Assessment-penerima-bantuan-social.git
+cd app-survei
 ```
 
 ### 2. Install Dependency
@@ -58,12 +58,12 @@ Edit file `.env` dan sesuaikan konfigurasi database:
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=nama_database
+DB_DATABASE=db_survei
 DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-### 4. Jalankan Migrasi
+### 4. Jalankan Migrasi (jika tidak pakai file SQL)
 
 ```bash
 php artisan migrate
@@ -95,6 +95,26 @@ composer require barryvdh/laravel-dompdf
 - `resources/views/` – Blade Templates
 - `routes/web.php` – Rute aplikasi
 - `database/migrations/` – Struktur tabel
+- `database/db_survei.sql` – File database hasil export
+
+---
+
+## 🗄️ Database
+
+Database MySQL disertakan dalam file:
+
+```
+database/db_survei.sql
+```
+
+### 📥 Cara Import ke phpMyAdmin:
+1. Buka [http://localhost/phpmyadmin](http://localhost/phpmyadmin)
+2. Buat database baru dengan nama: `db_survei`
+3. Klik tab **Import**
+4. Pilih file `db_survei.sql` dari folder `database`
+5. Klik **Go**
+
+Setelah itu, kamu bisa langsung menjalankan Laravel seperti biasa.
 
 ---
 
@@ -115,6 +135,6 @@ Proyek ini bersifat open-source untuk kebutuhan pembelajaran dan pengembangan si
 
 ## 📫 Kontak
 
-Dikembangkan oleh: Noni Mutia Utari
-Email: [nonimutiatugas@gmail.com]  
+Dikembangkan oleh: **Noni Mutia**  
+Email: [nonimutia03@gmail.com](mailto:nonimutia03@gmail.com)  
 GitHub: [https://github.com/NoniMutia](https://github.com/NoniMutia)
